@@ -1,0 +1,60 @@
+﻿<Window x:Class="labb3enSida.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labb3enSida"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowStartupLocation="CenterScreen" Height="300" Width="450" Background="LightGray">
+    <Grid HorizontalAlignment="Center" Width="450" Height="234" VerticalAlignment="Top" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="123"/>
+            <ColumnDefinition Width="177"/>
+
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Name: " HorizontalAlignment="Left" Margin="9,0,0,0" 
+               VerticalAlignment="Center" Width="61" Height="26"/>
+
+        <TextBox Grid.ColumnSpan="2"  x:Name="txtName" HorizontalAlignment="Left" Margin="69,0,0,0"
+                 TextWrapping="Wrap" PreviewTextInput="txtName_PreviewTextInput" VerticalAlignment="Center" Width="120" Height="18"   />
+
+        <Label Content="Day:" HorizontalAlignment="Left" Margin="10,38,0,0" 
+               VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="26"/>
+
+        <DatePicker Grid.Column="1" Name="TableDate"  HorizontalAlignment="Center" Margin="0,40,0,0" 
+                    VerticalAlignment="Top" RenderTransformOrigin="0.416,0.568" Width="115" Grid.RowSpan="2" Height="24"/>
+
+        <Label Content="Time:" HorizontalAlignment="Left" Margin="10,16,0,0" 
+               Grid.Row="1" VerticalAlignment="Top" Height="26" Width="38"/>
+
+        <ComboBox Name="comboBoxTime" SelectedIndex="0" Loaded="comboBoxTime_Loaded" HorizontalAlignment="Center" Margin="0,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="115" Height="22" Grid.Column="1"  />
+
+        <Label Content="Table: " HorizontalAlignment="Left" Margin="10,0,0,0" 
+               Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="2" Height="26" Width="43"/>
+
+        <ComboBox Name="ComboBoxTable" SelectedIndex="0" Loaded="ComboBoxTable_Loaded" 
+                  Grid.Column="1" HorizontalAlignment="Center" Margin="0,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="116" Grid.RowSpan="2" Height="22" />
+
+        <Button Grid.Column="1" Name="btnBook" Content="Book" HorizontalAlignment="Left" 
+                Margin="70,18,0,0" Grid.Row="2" VerticalAlignment="Top" Width="50" Height="20" Click="btnBook_Click_1"/>
+
+        <ListBox Grid.Column="2" x:Name="listboxTable"                 Margin="10,16,-64,0" Grid.RowSpan="4" Grid.ColumnSpan="2" />
+        <Button Grid.Column="2" Name="btnDelete" Content="Delete" HorizontalAlignment="Left"
+                Margin="75,0,0,25" Grid.Row="4" VerticalAlignment="Bottom" Width="100" Height="25" RenderTransformOrigin="0.518,1.066" Click="btnDelete_Click" />
+        <Button Grid.Column="1" Name="btnShowList" Content="Hide List" HorizontalAlignment="Left"  
+                Margin="9,5,0,0" Grid.Row="3" VerticalAlignment="Top" Height="30" Width="110" Click="btnShowList_Click" />
+        <Label Grid.Column="2" x:Name="ListInfo" Content="Name  /Date    / Time/  Table" Margin="13,-6,-64,0" VerticalAlignment="Top"/>
+
+    </Grid>
+
+</Window>
